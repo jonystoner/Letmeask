@@ -4,15 +4,16 @@
   height: 100vh;
 
   aside {
-    flex: 7;
+    flex: 1;
 
-    background: #0d0ae9;
+    background: #e66256;
     color: #fff;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    align-items: center;
     padding: 120px 80px;
 
     img {
@@ -31,15 +32,15 @@
     }
   }
   main {
-    flex: 8;
-    
+    flex: 1;
+
     padding: 0 32px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    }
+  }
 
   .main-content {
     display: flex;
@@ -47,38 +48,57 @@
 
     width: 100%;
     max-width: 500px;
-    
+
     align-items: stretch;
     text-align: center;
 
     > img {
-       align-self: center ;
+      align-self: center;
     }
 
-    form{
-      input{
+    h2 {     
+      font-size: 24px;
+
+      margin: 64px 0 24px;
+
+      font-family: 'Poppins' sans-serif;
+    }
+
+    form {
+      input {
         height: 50px;
+        width: 50px;
         border-radius: 8px;
-
         padding: 0 16px;
-        background: #ffffff;
+        background: #fff;
         border: 1px solid #a8a8b3;
-
       }
 
-      button{
-        margin-top: 16px; 
-        background: blue;      
+      button {
+        margin-top: 16px;
       }
-      button,input{
+
+      button,
+      input {
         width: 100%;
+      }
+    }
+
+    p {
+      margin-top: 16px;
+      font-size: 45px;
+      color: #737380;
+      margin-top: 16px;
+
+      a {
+        color: #e559f9;
       }
     }
   }
 
   .create-room {
-    margin-top: 64px;
-    height: 55px;
+    margin-top: 40px;
+    height: 40px;
     border-radius: 8px;
 
     font-weight: 500px;
@@ -88,47 +108,44 @@
 
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 
     cursor: pointer;
     border: 0;
 
     transition: 0.2s;
 
-    img{
+    img {
       margin-right: 8px;
     }
 
-    &:hover{
-        filter: brightness(0.9);
-
+    &:hover {
+      filter: brightness(0.9);
     }
   }
-  .separator{
-
-    font-size:  14px;
+  .separator {
+    font-size: 12px;
     color: #a8a8b3;
 
-    margin: 60px;
+    margin: 45px;
+    width: 200px;
     display: flex;
     align-items: center;
 
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       flex: 1px;
       height: 1px;
-      background:  #a8a8b3;
-      margin-right: 16px;    
-
+      background: #a8a8b3;
+      margin-right: 10px;
     }
 
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       flex: 1px;
       height: 1px;
-      background:  #a8a8b3;
-      margin-left: 16px;   
-
+      background: #a8a8b3;
+      margin-left: 10px;
     }
   }
 }
