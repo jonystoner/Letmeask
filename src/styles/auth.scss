@@ -6,7 +6,7 @@
   aside {
     flex: 1;
 
-    background: #e66256;
+    background: #5678e6;
     color: #fff;
 
     display: flex;
@@ -68,10 +68,11 @@
       input {
         height: 50px;
         width: 50px;
+        margin-left: 33px;
         border-radius: 8px;
         padding: 0 16px;
         background: #fff;
-        border: 1px solid #a8a8b3;
+        border: 1px solid #f50505;
       }
 
       button {
@@ -79,8 +80,8 @@
       }
 
       button,
-      input {
-        width: 100%;
+        input {
+         width: 100%;
       }
     }
 

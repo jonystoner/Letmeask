@@ -22,13 +22,13 @@ export function NewRoom() {
         </div>        
         <form>
             <input type="text"
-            placeholder="Nome da Sala"
+              placeholder="Nome da Sala"
             />
             <Button type="submit" >
                 Criar sala 
             </Button>
             </form>
-            <p> Quer entrar em uma sala existente <Link  to="/" > clique  qui </Link> </p>
+            <p> Quer entrar em uma sala existente <Link to="/" > clique  qui </Link> </p>
        </main>
 
     </div>
