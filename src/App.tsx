@@ -11,7 +11,7 @@ export  const TestContext = createContext({} as any);
 
 function App() {
 
-  const [value, setValue] = useState('teses')
+  const [value, setValue] = useState("testes")
 
   return (
     <div>  
@@ -20,12 +20,8 @@ function App() {
         <Route path="/" exact component={Home}/>
         <Route path="/rooms/new" component={NewRoom}/>
         </TestContext.Provider>
-      </BrowserRouter>
-
-       
-    </div>      
-     
-       
+      </BrowserRouter>       
+    </div>         
      
   );
 }
