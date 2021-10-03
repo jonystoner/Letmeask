@@ -22,7 +22,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "react-scripts start dev",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -49,6 +48,6 @@
     "@types/react-router-dom": "^5.1.8",
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16"
   }
 }
