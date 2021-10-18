@@ -13,6 +13,18 @@
       > img {
         max-height: 45px;
       }
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        height: 45px; 
+        gap: 15px;  
+      }
+
+      btn-info {
+
+        height: 45px;
+      }
     }
   }
   main {
@@ -29,16 +41,16 @@
       h1 {
         font-family: "Poppins", sans-serif;
         font-size: 24;
-        color: #29292e
+        color: #29292e;
       }
-      span {        
-         margin-left:16px;
-         background: #e559f9;
-         border-radius: 9999px;
-         padding: 8px  16px; 
-         color: #fff;
-         font-weight: 500;
-         font-size: 14px; 
+      span {
+        margin-left: 16px;
+        background: #e559f9;
+        border-radius: 9999px;
+        padding: 8px 16px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
       }
     }
 
@@ -63,13 +75,12 @@
 
         .user-info {
           display: flex;
-          align-items: center; 
-          
+          align-items: center;
+
           img {
             width: 32px;
             height: 32px;
             border-radius: 50%;
-
           }
 
           span {
@@ -78,7 +89,6 @@
             font-weight: 500;
             font-size: 14px;
           }
-
         }
 
         span {
@@ -87,7 +97,7 @@
           font-weight: 500;
 
           button {
-            background: transparent; 
+            background: transparent;
             border: 0;
             color: #835afd;
             text-decoration: underline;
@@ -99,7 +109,6 @@
 
     .question-list {
       margin-top: 32px;
-
     }
   }
 }

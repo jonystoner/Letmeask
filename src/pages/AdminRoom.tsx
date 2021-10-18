@@ -10,10 +10,12 @@ import { database } from "../services/firebase";
 
 import "../styles/room.scss";
 
+
+
 type RoomParams = {
   id: string;
 };
-export function Room() {
+export function AdminRoom() {
   const { user } = useAuth();
 
   const params = useParams<RoomParams>();
@@ -55,8 +57,9 @@ export function Room() {
         <header>
           <div className="content">
             <img src={logoImg} alt="letmeask" />
-            <div>
+            <div className="flex flex-row " >
               <RoomCode code={roomId} />{" "}
+              <Button isOutlined className="btn-info "> Encerrar Sala </Button>
             </div>
           </div>
         </header>
@@ -67,29 +70,7 @@ export function Room() {
               <span className="bg"> {question.length} pergunta </span>
             )}
           </div>
-          <form onSubmit={handleSendQuestion}>
-            <textarea
-              placeholder="o que voce quer perguntar ?"
-              onChange={(event) => setnewQuestion(event.target.value)}
-              value={newQuestion}
-            />
-            <div className="form-footer">
-              {user ? (
-                <div className="user-info">
-                  <img src={user.avatar} alt={user.name} />
-                  <span className="ml-6"> {user.name} </span>
-                </div>
-              ) : (
-                <span>
-                  Para enviar uma pergunta faça, <button>seu login </button>{" "}
-                </span>
-              )}
-              <Button type="submit" disabled={!user}>
-                {" "}
-                Enviar pergunta
-              </Button>
-            </div>
-          </form>
+
           <div className="question-list">
             {question.map((question) => {
               return (
@@ -107,4 +88,4 @@ export function Room() {
   );
 }
 
-export default Room;
+export default AdminRoom;
