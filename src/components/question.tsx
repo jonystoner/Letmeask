@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import "../styles/question.scss"
 
 
@@ -7,9 +9,10 @@ type QuestionProps = {
     name: string;
     avatar: string;
   };
+  children?: ReactNode;
 };
 
-export function Question({ content, author }: QuestionProps) {
+export function Question({ content, author, children }: QuestionProps) {
   return (
     <>
       <div className="question">
@@ -20,7 +23,7 @@ export function Question({ content, author }: QuestionProps) {
             <span> {author.name} </span>
           </div>
         </footer>
-        <div> </div>
+        <div className="flex flex-row justify-end">{children}</div>
       </div>
     </>
   );
