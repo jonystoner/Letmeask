@@ -1,28 +1,31 @@
-import { createContext, useState } from 'react';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { BrowserRouter, Route } from 'react-router-dom'
+import { Home } from "./pages/Home";
+import { NewRoom } from "./pages/NewRoom";
+import { AdminRoom } from "./pages/AdminRoom";
+import { Room } from "./pages/Room";
+import { Page } from "./pages/Page";
 
-import { Home } from './pages/Home';
-import {NewRoom} from './pages/NewRoom'
+import "./styles/global.scss";
 
-import './styles/global.scss';
+import { AuthContextProvider } from "./contexts/AuthContext";
 
-export  const TestContext = createContext({} as any); 
 
 function App() {
-
-  const [value, setValue] = useState("testes")
-
   return (
-    <div>  
-       <BrowserRouter>
-        <TestContext.Provider value={{ value, setValue}} >
-        <Route path="/" exact component={Home}/>
-        <Route path="/rooms/new" component={NewRoom}/>
-        </TestContext.Provider>
-      </BrowserRouter>       
-    </div>         
-     
+    <div>
+      <BrowserRouter>
+        <AuthContextProvider>
+          <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/rooms/new" exact component={NewRoom} />
+          <Route path="/rooms/:id" component={Room} />
+          <Route path="/admin/rooms/:id" component={AdminRoom} />
+          <Route path="/pages" component={Page} />
+          </Switch>
+        </AuthContextProvider>
+      </BrowserRouter>
+    </div>
   );
 }
 
